@@ -1,0 +1,15 @@
+// The Swift Programming Language
+// https://docs.swift.org/swift-book
+
+
+import GRDB
+
+@main
+struct SwiftPlayground {
+    static func main() {
+        let dbPath = "./library.db"
+        guard let dbQueue = try? DatabaseQueue(path: dbPath) else {
+            fatalError("Could not open database.")
+        }
+    }
+}
